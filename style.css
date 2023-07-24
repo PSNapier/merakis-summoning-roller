@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
+:root {
+  --bg-colour: rgb(36, 36, 36);
+  --font-colour: rgb(255, 192, 55);
+  --hr-colour: rgba(255, 192, 55, .25);
+  --fontPill-colour: rgba(255, 192, 55, .25);
+  --fontSelected-colour: rgba(255, 255, 255, .5);
+  --fontPillSelected-colour: rgba(255, 255, 255, .25);
+  --button-colour: rgba(179, 179, 179, 0.20);
+  --box-colour: rgba(179, 179, 179, 0.15);
+  --boxAlt-colour: rgba(179, 179, 179, .20);
+}
+
+body {
+  background: var(--bg-colour);
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/01151d19-e2b3-4ccf-aac9-52636fd2e5c5/ddq3i6m-b8b7b89f-cfe5-4183-b10a-bc96e6efde85.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzAxMTUxZDE5LWUyYjMtNGNjZi1hYWM5LTUyNjM2ZmQyZTVjNVwvZGRxM2k2bS1iOGI3Yjg5Zi1jZmU1LTQxODMtYjEwYS1iYzk2ZTZlZmRlODUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.K2bD0G3VSeZAQ9zdNyjxjKyBHUWUyk2n-J0F0Nxg7fA");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--font-colour);
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  min-width: 650px;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+
+.noselect {
+  user-select: none;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Cinzel', serif;
+  line-height: 0px;
+  font-weight: bolder;
+	font-size: 130%;
+  letter-spacing: 2px;
+}
+
+#inputs h1 {
+  padding: 5px;
+}
+
+hr {
+  border: 0px;
+  height: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(to right, var(--hr-colour), var(--font-colour), var(--hr-colour));
+}
+
+br {
+  line-height: 1;
+}
+
+::selection {
+  background: var(--font-colour);
+  color: var(--fontSelected-colour);
+}
+
+input[type=checkbox] {
+  margin: -10px;
+  margin-left: 5px;
+  padding: 0px;
+  vertical-align: middle;
+  height: 18px;
+  width: 18px;
+}
+
+input[type=text] {
+  vertical-align: middle;
+  height: 20px;
+  width: 225px;
+  outline: 0;
+}
+
+select {
+  outline: none;
+  height: 26.2px;
+  text-transform: capitalize;
+}
+
+select:disabled {
+  opacity: .5;
+}
+
+.option, .optionSelected {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.option {
+  cursor: default;
+  padding: 2px;
+  transition: 0.1s;
+  line-height: 1.6;
+}
+
+#summoner1Mutations, #summoner2Mutations, #summoner3Mutations, #summoner4Mutations {
+  display: none;
+  margin: auto;
+  margin-top: -30px;
+  line-height: 2em;
+  overflow-wrap: break-word;
+  max-width: 550px;
+}
+
+/* pill selction */
+.pill, .pillSelected {
+  padding: 2px;
+  border-radius: 7px;
+  transition: 0.1s;
+  margin-left: 3px;
+  margin-right: 3px;
+  white-space: nowrap;
+}
+
+.pill {
+  background: var(--boxAlt-colour);
+  color: var(--font-colour);
+}
+
+.pillSelected {
+  background: var(--fontPill-colour);
+  color: var(--font-colour);
+}
+
+.pill:hover, .pillSelected:hover {
+  background: var(--font-colour);
+  color: var(--fontSelected-colour);
+}
+
+.pill:active, .pillSelected:active {
+  filter: brightness(110%);
+}
+
+/* reload button */
+#reload {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+
+svg {
+	fill: var(--fontPillSelected-colour);
+}
+
+svg:hover {
+	fill: var(--fontSelected-colour);
+}
+
+#browser {
+  max-width: 600px;
+  text-align: center;
+  /*margin: auto;*/
+}
+
+#flexParent {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: 100vh;
+}
+
+#inputs, #output {
+  margin: 25px;
+}
+
+#inputs {
+  background: var(--box-colour);
+  border: 1px solid var(--box-colour);
+  padding: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 80%;
+  min-width: 600px;
+  text-align: center;
+}
+
+#itemColWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#itemCol1, #itemCol2 {
+  width: 275px;
+  text-align: left;
+  min-width: 225px;
+  margin: 0px 25px;
+}
+
+#itemCol1 input, #itemCol2 input {
+  margin-top: 2px;
+  float: right;
+}
+
+#itemCol1 select, #itemCol2 select {
+  margin-top: 2px;
+  margin-right: -7px;
+  height: 16px;
+  float: right;
+  max-width: 100px;
+}
+
+#famcon2, #famcon3 {
+  display: none;
+}
+
+/*
+#output {
+  background: var(--boxAlt-colour);
+  border: 1px solid var(--boxAlt-colour);
+  border-radius: 0px;
+  padding: 25px;
+  width: 66%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  color: var(--font-colour);
+  font-size: 100%;
+  font-weight: 500;
+}
+*/
+
+#output {
+  padding: 25px;
+  text-align: center;
+  color: var(--font-colour);
+  font-size: 125%;
+  font-weight: 500;
+}
+
+#output > #warning, #output > div[id^="kit"] {
+  white-space: pre-wrap;
+}
+
+.option, .optionSelected {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.option {
+  cursor: default;
+  padding: 2px;
+  transition: 0.1s;
+  line-height: 1.6;
+}
+
+.option:hover {
+  color: var(--fontSelected-colour);
+}
+
+.optionSelected {
+  background: var(--fontPill-colour);
+  border-radius: 7px;
+  line-height: 1.6;
+  padding: 2px;
+  color: var(--font-colour);
+  transition: 0.1s
+}
+
+.optionSelected:hover {
+  background: var(--fontPillSelected-colour);
+  color: var(--fontSelected-colour);
+}
+
+button {
+  background-color: var(--button-colour);
+  color: var(--font-colour);
+  border: 1px solid var(--boxAlt-colour);
+  padding: 25px;
+  text-align: center;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 125%;
+  font-weight: boldest;
+  white-space: no-wrap;
+}
+
+button:active {
+  filter: brightness(110%);
+}
+
+button:focus {
+  outline: 0;
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+button:hover {
+  animation: shake 0.4s;
+}

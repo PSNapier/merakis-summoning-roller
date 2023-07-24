@@ -1,0 +1,77 @@
+<head>
+  <!-- © 2020 MISCNAPIER ALL RIGHTS RESERVED -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="toolbox.js"></script>
+</head>
+<body onload="browserCheck()">
+  <div id="reload" class="noselect">
+      <svg width="30" height="30" viewBox="0 0 24 24" onclick="reload()"><path d="M19,8L15,12H18A6,6 0 0,1 12,18C11,18 10.03,17.75 9.2,17.3L7.74,18.76C8.97,19.54 10.43,20 12,20A8,8 0 0,0 20,12H23M6,12A6,6 0 0,1 12,6C13,6 13.97,6.25 14.8,6.7L16.26,5.24C15.03,4.46 13.57,4 12,4A8,8 0 0,0 4,12H1L5,16L9,12"></path></svg>
+    </div>
+  <div id="flexParent">
+    <div id="browser" class="noselect"><br>This roller uses regex lookbehinds, which aren't supported in all browsers.<br>If the roller isn't working as anticipated make sure you're using the latest version of Chrome! :)</div>
+    <div id="inputs" class="noselect">
+      <hr>
+      <h1>Summoners</h1><br>
+      Master present? <input id="master" type="checkbox">
+
+      <br><br>1. <input id="summoner1Geno" type="text" placeholder="insert geno..."><select id="summoner1Build"><option value="false">build</option></select><select id="summoner1Element"><option value="false">element</option></select> Mutations? <input id="summoner1MutationsToggle" type="checkbox" onclick="toggle1()"><div id="summoner1Mutations"><br></div>
+
+      <br>2. <input id="summoner2Geno" type="text" placeholder="insert geno..."><select id="summoner2Build"><option value="false">build</option></select><select id="summoner2Element"><option value="false">element</option></select> Mutations? <input id="summoner2MutationsToggle" type="checkbox" onclick="toggle2()"><div id="summoner2Mutations"><br></div>
+
+      <br>3. <input id="summoner3Geno" type="text" placeholder="insert geno..."><select id="summoner3Build"><option value="false">build</option></select><select id="summoner3Element"><option value="false">element</option></select> Mutations? <input id="summoner3MutationsToggle" type="checkbox" onclick="toggle3()"><div id="summoner3Mutations"><br></div>
+
+      <br>4. <input id="summoner4Geno" type="text" placeholder="insert geno..."><select id="summoner4Build"><option value="false">build</option></select><select id="summoner4Element"><option value="false">element</option></select> Mutations? <input id="summoner4MutationsToggle" type="checkbox" onclick="toggle4()"><div id="summoner4Mutations"><br></div>
+
+      <hr>
+      <h1>Items</h1><br>
+      <div id="itemColWrapper">
+        <div id="itemCol1">Lock Of Hair <input id="lockOfHair" type="checkbox">
+          <br>Protective Balm <input id="protectiveBalm" type="checkbox">
+          <br>Nurturing Rune <input id="nurturingRune" type="checkbox">
+          <br><br>Augmentation Charm <input id="augmentationCharm" type="checkbox">
+          <br>Masculine Charm <input id="masculineCharm" type="checkbox">
+          <br>Feminine Charm <input id="feminineCharm" type="checkbox">
+          <br>Mutation Charm <input id="mutationCharm" type="checkbox">
+          <br>Dark Charm <input id="darkCharm" type="checkbox">
+          <br>Light Charm <input id="lightCharm" type="checkbox">
+        </div>
+        <div id="itemCol2">
+          Tincture Of Wealth <select id="tinctureOfWealth1"><option value="false">none</option></select>
+          <br><select id="tinctureOfWealth2"><option value="false">none</option></select>
+          <br><select id="tinctureOfWealth3"><option value="false">none</option></select>
+          <br><br>Avatars <select id="avatars1"><option value="false">none</option></select>
+          <br><select id="avatars2"><option value="false">none</option></select>
+          <br><select id="avatars3"><option value="false">none</option></select>
+          <br><br>Essences <select id="essences1"><option value="false">none</option> </select>
+          <br><select id="essences2"><option value="false">none</option> </select>
+          <br><select id="essences3"><option value="false">none</option> </select>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <button onclick="buttonPress()" class="noselect" ><h1>Roll</h1></button>
+    <div id="output" onClick="selectText('output')">
+      <div id="warning"></div>
+      <div id="kit1"></div>
+      <div id="kit2"></div>
+      <div id="kit3"></div>
+      <div id="kit4"></div>
+      <div id="kit5"></div>
+      <div id="kit6"></div>
+      <div id="kit7"></div>
+      <div id="kit8"></div>
+      <div id="kit9"></div>
+      <div id="kit10"></div>
+    </div>
+  </div>
+</body>
+
+<script src="script.js"></script>
+<!--Please note that the project you are working on is a legacy project which may not function correctly. In order to improve its performance, there are two key actions that need to be taken:
+
+1. The first action to take is to import packages in JavaScript files as the global libs are no longer available.
+
+2. The second action is to verify the file imports, as they may be broken. It is important to ensure that all files are properly imported to avoid any potential issues.-->
+<link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>,
+<script src="toolbox.js"></script>
